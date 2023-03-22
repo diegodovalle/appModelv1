@@ -14,7 +14,8 @@ export class Tab3Page implements OnInit {
   ngOnInit() {
     this.form = this.formBuilder.group({
       nome: ['', [Validators.required]],
-      endereco: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      mensagem: ['', [Validators.required]],
     });
   }
 
@@ -26,13 +27,15 @@ export class Tab3Page implements OnInit {
 
   enviar() {
     let nome = this.form.get('nome').value;
-    let endereco = this.form.get('endereco').value;
+    let email = this.form.get('email').value;
+    let mensagem = this.form.get('mensagem').value;
 
     console.log(nome);
-    console.log(endereco);
+    console.log(email);
+    console.log(mensagem);
 
     this.abrirUrl(
-      `https://api.whatsapp.com/send?phone=555194904309&text=Ola%20me%20chamo%20${nome}%20moro%20em%20${endereco}%20vim%20atraves%20do%20seu%20App%20Gostaria%20de%20receber%20doacoes`
+      `https://api.whatsapp.com/send?phone=555194904309&text=Ola%20me%20chamo%20${nome}%20moro%20em%20${email}%20vim%20atraves%20do%20seu%20App%20Gostaria%20de%20receber%20doacoes`
     );
   }
 }
