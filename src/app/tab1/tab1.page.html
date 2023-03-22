@@ -1,19 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="titulo"></ion-title>
-    <ion-icon name="share-social-sharp" class="icon-large"></ion-icon>
+    <ion-title
+      ><ion-title class="titulo"
+        ><img
+          src="https://lh5.googleusercontent.com/QOGjPL4LPxz-4K6xIUKbeGgRzCz7z7C0zCWcrHsC4Uij7l-CQ6HWNmSstEJybEmkdXU=w2400" /></ion-title
+    ></ion-title>
+    <ion-buttons slot="end">
+      <ion-button
+        ><ion-icon name="share-social-sharp" class="icon-large"></ion-icon
+      ></ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
   <div class="conteudo animate__animated animate__fadeInLeft">
     <img
       class="img-item"
-      src="https://dvgsolucoes.com/apps/abr/wp-content/uploads/sites/5/2023/02/capa-site-1.webp"
+      src="https://lh6.googleusercontent.com/5bu5bBQtoxOaz-aoqK4tMOv_FsNJzfxcF9KK_yPq5v1Xha_atymGKF3AKM7Pwt25ZlU=w2400"
       alt="Imagem de Solidariedade"
     />
-    <p>Acesse nosso site<br />www.abrconsultoria.com.br</p>
-    <p>Acesse nosso site<br />www.abrconsultoria.com.br</p>
+    <ion-tab-bar
+      slot="top"
+      style="background-color: #000000; padding-top: 50px"
+    >
+      Acesse nosso site<br />www.abrconsultoria.com.br
+    </ion-tab-bar>
+
     <ion-card [routerLink]="['/tabs/tab2']">
       <ion-item>
         <ion-thumbnail slot="start">

@@ -3,7 +3,10 @@
 
 .titulo {
   text-align: left;
-  background-image: url(https://dvgsolucoes.com/apps/abr/wp-content/uploads/sites/5/2023/02/Logoa-br.png);
+  max-width: 180px;
+  position: relative;
+  top: 10px;
+  left: -15px;
 }
 
 :root {
@@ -14,7 +17,7 @@
   --ion-toolbar-color: #ffffff;
 
   /* barra inferior */
-  --ion-tab-bar-background: #000000dc;
+  --ion-tab-bar-background: #000000df;
   --ion-tab-bar-color: #cccccc;
   --ion-tab-bar-color-selected: #ffffff;
 
@@ -42,6 +45,7 @@ ion-card {
   margin-bottom: 5px;
   cursor: pointer;
   transition-duration: 500ms;
+  display: none;
 }
 
 ion-card:hover {
@@ -53,7 +57,7 @@ ion-card:hover {
   padding-bottom: 0px;
   width: 100%;
   height: 250px;
-  border-radius: 40px;
+  border-radius: 40px 40px 30px 30px;
 }
 
 ion-thumbnail {
@@ -66,7 +70,7 @@ ion-tab-bar {
 
 ion-tab-button .large {
   bottom: 5px;
-  font-size: 80px;
+  font-size: 75px;
   position: absolute;
 }
 
