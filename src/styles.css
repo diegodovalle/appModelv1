@@ -14,7 +14,7 @@
   --ion-toolbar-color: #ffffff;
 
   /* barra inferior */
-  --ion-tab-bar-background: #000000;
+  --ion-tab-bar-background: #000000dc;
   --ion-tab-bar-color: #cccccc;
   --ion-tab-bar-color-selected: #ffffff;
 
@@ -35,13 +35,6 @@
 
 ion-content {
   --ion-background-color: #000000;
-}
-
-.large {
-  position: absolute !important;
-  bottom: 5px;
-
-  font-size: 80px;
 }
 
 ion-card {
@@ -68,14 +61,13 @@ ion-thumbnail {
 }
 
 ion-tab-bar {
-  border-top: 1px solid #ccc;
-  position: relative;
-  z-index: 9999;
+  height: 10vh;
 }
 
-ion-icon {
-  z-index: 9999;
-  position: relative;
+ion-tab-button .large {
+  bottom: 5px;
+  font-size: 80px;
+  position: absolute;
 }
 
 @keyframes animation-item {
