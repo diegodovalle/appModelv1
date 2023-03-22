@@ -9,6 +9,12 @@
   left: -15px;
 }
 
+.titulo-contato {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
 :root {
   --ion-font-family: 'Varela Round', sans-serif;
 
