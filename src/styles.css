@@ -4,8 +4,6 @@
 .titulo {
   text-align: left;
   background-image: url(https://dvgsolucoes.com/apps/abr/wp-content/uploads/sites/5/2023/02/Logoa-br.png);
-  max-height: 100px;
-  max-width: 100px;
 }
 
 :root {
@@ -17,18 +15,16 @@
 
   /* barra inferior */
   --ion-tab-bar-background: #000000;
-  --ion-tab-bar-color: #44578a;
-  --ion-tab-bar-color-selected: #fff100;
+  --ion-tab-bar-color: #cccccc;
+  --ion-tab-bar-color-selected: #ffffff;
 
   --ion-text-color: white;
   --ion-text-color-rgb: 255, 255, 255;
 
-  --ion-card-background: linear-gradient(
-    139deg,
-    #831affab 0%,
-    transparent 100%
-  );
+  --ion-card-background: #000000;
   --ion-item-background: transparent;
+
+  --ion-content-background: #000000;
 }
 
 .conteudo {
@@ -38,7 +34,14 @@
 }
 
 ion-content {
-  background-color: #000;
+  --ion-background-color: #000000;
+}
+
+.large {
+  position: absolute !important;
+  bottom: 5px;
+
+  font-size: 80px;
 }
 
 ion-card {
@@ -56,13 +59,23 @@ ion-card:hover {
   padding: 20px;
   padding-bottom: 0px;
   width: 100%;
-  max-width: 400px;
-
-  animation: animation-img-item 4s infinite alternate;
+  height: 250px;
+  border-radius: 40px;
 }
 
 ion-thumbnail {
   animation: animation-item 4s infinite alternate;
+}
+
+ion-tab-bar {
+  border-top: 1px solid #ccc;
+  position: relative;
+  z-index: 9999;
+}
+
+ion-icon {
+  z-index: 9999;
+  position: relative;
 }
 
 @keyframes animation-item {
@@ -87,10 +100,4 @@ ion-thumbnail {
   100% {
     transform: rotate(-1deg) scale(1.04);
   }
-}
-
-.large {
-  font-size: 80px;
-  position: absolute;
-  bottom: 0px;
 }
