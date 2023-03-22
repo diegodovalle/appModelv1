@@ -112,8 +112,15 @@ form ion-item {
   padding: 0px;
   margin: 0px 20px;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 
-.text-item {
+form ion-button {
+  background-color: #000000;
   margin: 0px 20px;
+  height: 50px;
+}
+
+.texto-item {
+  margin: 0px 20px 20px 20px;
 }

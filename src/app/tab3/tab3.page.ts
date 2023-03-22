@@ -35,7 +35,7 @@ export class Tab3Page implements OnInit {
     console.log(mensagem);
 
     this.abrirUrl(
-      `https://api.whatsapp.com/send?phone=555194904309&text=Ola%20me%20chamo%20${nome}%20moro%20em%20${email}%20vim%20atraves%20do%20seu%20App%20Gostaria%20de%20receber%20doacoes`
+      `https://api.whatsapp.com/send?phone=552135002094&text=Ola%20me%20chamo%20${nome}%20meu%20email%20é%20${email}%20vim%20atraves%20do%20seu%20App%20Gostaria%20de%20entrar%20em%20contato`
     );
   }
 }
