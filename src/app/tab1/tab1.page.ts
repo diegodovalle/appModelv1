@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
-import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-tab1',
@@ -8,29 +7,23 @@ import { File } from '@ionic-native/file/ngx';
   styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page {
-  constructor(private socialSharing: SocialSharing, private file: File) {}
+  constructor(private socialSharing: SocialSharing) {}
 
-  compartilharTexto() {
-    this.socialSharing.share('Compartilhando texto');
-  }
-
-  compartilharLink() {
-    this.socialSharing.share('', '', '', 'https://www.abrconsultoria.com.br');
-  }
-
-  async compartilharImagem() {
-    let lisaImg = await this.resolveLocalFile();
+  shareEmail() {
     this.socialSharing
-      .share('', '', lisaImg.nativeURL)
-      .then((s) => {
-        this.file.removeFile(this.file.cacheDirectory, lisaImg.name);
+      .canShareViaEmail()
+      .then(() => {
+        this.socialSharing
+          .shareViaEmail('Body', 'Subject', ['recipient@example.org'])
+          .then(() => {
+            // Success!
+          })
+          .catch(() => {
+            console.log('Erro');
+          });
       })
-      .catch((e) => {
-        alert('Erro: ' + e);
+      .catch(() => {
+        console.log('Erro Fora');
       });
-  }
-
-  async resolveLocalFile() {
-    return this.file.copyFile(`${this.file.applicationDirectory}www/assets/`);
   }
 }
