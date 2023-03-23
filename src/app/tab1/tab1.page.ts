@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { Share } from '@capacitor/share';
 
 @Component({
   selector: 'app-tab1',
@@ -7,23 +7,16 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
   styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page {
-  constructor(private socialSharing: SocialSharing) {}
+  result: string;
 
-  shareEmail() {
-    this.socialSharing
-      .canShareViaEmail()
-      .then(() => {
-        this.socialSharing
-          .shareViaEmail('Body', 'Subject', ['recipient@example.org'])
-          .then(() => {
-            // Success!
-          })
-          .catch(() => {
-            console.log('Erro');
-          });
-      })
-      .catch(() => {
-        console.log('Erro Fora');
-      });
+  constructor() {}
+
+  async share() {
+    await Share.share({
+      title: 'See cool stuff',
+      text: 'Really awesome thing you need to see right meow',
+      url: 'http://ionicframework.com/',
+      dialogTitle: 'Share with buddies',
+    });
   }
 }
